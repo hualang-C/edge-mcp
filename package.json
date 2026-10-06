@@ -1,0 +1,46 @@
+{
+  "name": "edge-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for controlling Microsoft Edge via the Chrome DevTools Protocol (CDP). Connects to an already-running Edge instance launched with --remote-debugging-port. Runs in stdio mode (default) or as a shared HTTP service (--http).",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "edge-mcp": "src/index.js"
+  },
+  "files": [
+    "src",
+    "start.cmd",
+    "mcp_call.mjs"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "start:http": "node src/index.js --http"
+  },
+  "keywords": [
+    "mcp",
+    "edge",
+    "microsoft-edge",
+    "cdp",
+    "puppeteer",
+    "browser-automation",
+    "model-context-protocol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hualang-C/edge-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hualang-C/edge-mcp/issues"
+  },
+  "homepage": "https://github.com/hualang-C/edge-mcp#readme",
+  "license": "MIT",
+  "author": "hualang-C",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "puppeteer-core": "^23.0.0",
+    "zod": "^3.23.0"
+  }
+}
